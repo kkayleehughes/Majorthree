@@ -1,0 +1,128 @@
+@import 'varibales';
+.container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      header {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;      }
+      
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 2fr);
+        grid-gap: 1rem;
+        overflow: hidden;
+      }
+      
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 10px;
+        object-fit: cover;
+        position: relative;
+        margin: 0;
+        object-fit: cover;
+                border: 3px solid rgb(113, 103, 63);  
+                background-color: #ffffff0f;  
+                border-radius: 15px;
+        }
+
+      hr{
+        height: 1px;
+        background-color: #000000;
+        border: none;
+        margin: 10px;
+    }
+      
+    .caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        background-color: rgba(0, 0, 0, 0.312);
+        color: #fff;
+        font-size: 1.2rem;
+        text-align: center;
+        opacity: 0; /* set initial opacity to 0 */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      
+      
+      .image:hover .caption {
+        opacity: 1.5;
+        background-color: rgba(0, 0, 0, 0.378);
+      }
+      
+      body {
+        background-color: #b99b3887;
+        font-family: 'Times New Roman', Times, serif;
+      }
+      
+      h1 {
+        font-size: 40px;
+        color: black;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        word-spacing: 8px;
+      }
+
+      h2{
+        font-size: 20px;
+        color: black;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        word-spacing: 4px;
+
+      }
+      h3{
+        font-size: 25px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        word-spacing: 4px;
+        text-align: center;
+        padding: 15px;
+        margin: 10px;
+      }
+
+
+      
+      /* Media queries for larger screens */
+      @media screen and (min-width: 992px) {
+        .grid {
+                display: grid;
+                grid-template-columns: repeat(2, 2fr);
+                grid-gap: 1rem;
+                overflow: hidden;
+              }
+        .caption {
+          font-size: 1rem;
+        }
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        .grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 1rem;
+                overflow: hidden;
+              }
+              .caption {
+                font-size: 1rem;
+              }
+      }
+      @media screen and (max-width: 767px) {
+        .grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 1rem;
+                overflow: hidden;
+              }
+              .caption {
+                font-size: 1rem;
+              }
+      }
+      

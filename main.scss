@@ -1,0 +1,88 @@
+/* Import variables */
+@import 'variables';
+
+/* Default styles */
+.container {
+  max-width: $max-container-width;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: $header-margin-bottom;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: $grid-gap;
+}
+
+
+.image {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: $caption-padding;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: $caption-font-size;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image:hover .caption {
+  opacity: 1;
+}
+
+body {
+  background-color: $body-bg-color;
+}
+
+/* Media queries for larger screens */
+@media screen and (max-width: $max-screen-width) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: $grid-gap;
+  }
+
+  .image {
+    height: $image-height-large;
+  }
+
+  .caption {
+    font-size: $caption-font-size-large;
+  }
+}
+
+/* Media queries for smaller screens */
+@media screen and (max-width: $small-screen-width) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image {
+    height: $image-height-small;
+  }
+
+  .caption {
+    font-size: $caption-font-size-small;
+  }
+}
+
+@media screen and (max-width: $tiny-screen-width) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image {
+    height: $image-height-tiny;
+  }
+}
